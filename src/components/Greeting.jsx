@@ -17,12 +17,12 @@ function Greeting() {
 
     return (
         <div>
-            <p>Enter your name:</p>
-            <input name='name' value={user} type="text" onChange={inputHandle} />
+            <label htmlFor="name-input">Enter your name:</label>
             <br />
-            <div id='greeting-output'>
-                {show && <p>Hello {user}!</p>}
-            </div>
+            <br />
+            <input id='name-input' name='name' type='text' value={user} type="text" onChange={inputHandle} />
+            <br />
+            {show && <p>Hello {user}!</p>}
         </div>
     )
 }
