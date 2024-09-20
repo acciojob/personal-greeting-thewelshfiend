@@ -17,10 +17,8 @@ function Greeting() {
 
     return (
         <div>
-            <label htmlFor="name-input">Enter your name:</label>
-            <br />
-            <br />
-            <input id='name-input' name='name' value={user} type="text" onChange={inputHandle} />
+            <p>Enter your name:</p>
+            <input name='name' value={user} type="text" onChange={inputHandle} />
             <br />
             <div id='greeting-output'>
                 {show && <p>Hello {user}!</p>}
