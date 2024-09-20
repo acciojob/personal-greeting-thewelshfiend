@@ -11,7 +11,7 @@ function Greeting() {
             <label htmlFor='ip'>Enter your name:</label>
             <br />
             <input id='ip' type='text' onChange={inputHandle} />
-            <p>{text && `Hello ${text}!`}</p>
+            <p>{text && `Hello ${user}!`}</p>
         </div>
     )
 }
