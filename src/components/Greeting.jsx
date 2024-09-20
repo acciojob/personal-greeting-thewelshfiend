@@ -2,20 +2,16 @@ import React, { useState } from 'react'
 
 function Greeting() {
     const [user, setUser] = useState("");
-    const [show, setShow] = useState(false);
-    function inputHandle(e)
-    {
+    function inputHandle(e) {
         setUser(e.target.value);
     }
 
     return (
         <div>
-            <label htmlFor="name-input">Enter your name:</label>
+            <label htmlFor='ip'>Enter your name:</label>
             <br />
-            <br />
-            <input id='name-input' name='name' type='text' value={user} onChange={inputHandle} />
-            <br />
-            <p>{user && Hello {user}!}</p>
+            <input id='ip' type='text' onChange={inputHandle} />
+            <p>{text && `Hello ${text}!`}</p>
         </div>
     )
 }
