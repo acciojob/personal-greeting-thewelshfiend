@@ -5,14 +5,7 @@ function Greeting() {
     const [show, setShow] = useState(false);
     function inputHandle(e)
     {
-        const value = e.target.value;
-        setUser(value);
-        if(value != "")
-        {
-            setShow(true);
-            return;
-        }
-        setShow(false);
+        setUser(e.target.value);
     }
 
     return (
@@ -20,9 +13,9 @@ function Greeting() {
             <label htmlFor="name-input">Enter your name:</label>
             <br />
             <br />
-            <input id='name-input' name='name' type='text' value={user} type="text" onChange={inputHandle} />
+            <input id='name-input' name='name' type='text' value={user} onChange={inputHandle} />
             <br />
-            {show && <p>Hello {user}!</p>}
+            <p>{user && Hello {user}!}</p>
         </div>
     )
 }
